@@ -1,0 +1,24 @@
+<package project="home:SecureBusinessAustria:slibc" name="slibc">
+  <title></title>
+  <description></description>
+  <build>
+    <enable repository="CentOS-6"/>
+    <enable repository="Debian-6.0"/>
+    <enable repository="openSUSE_12.2"/>
+    <enable repository="Ubuntu-10.04"/>
+    <enable repository="Ubuntu-12.04"/>
+    <disable repository="CentOS-5"/>
+  </build>
+  <publish>
+    <enable repository="CentOS-6"/>
+    <enable repository="Debian-6.0"/>
+    <enable repository="openSUSE_12.2"/>
+    <enable repository="Ubuntu-10.04"/>
+    <enable repository="Ubuntu-12.04"/>
+    <disable repository="CentOS-5"/>
+  </publish>
+  <useforbuild>
+    <disable repository="CentOS-5"/>
+  </useforbuild>
+</package>
+

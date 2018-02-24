@@ -1,0 +1,3 @@
+Compile as shared object.
+
+Improve the contraint handler invocations. They should give better information.

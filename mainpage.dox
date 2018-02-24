@@ -1,0 +1,36 @@
+/*! \mainpage Slibc API documentation
+ *
+ * \section intro_sec Introduction
+
+This library provides an implementation of the bounds-checking C functions (as specified in Annex K of the current C standard, a.k.a. C11) for use with the GNU C library. These functions lower the risk of introducing security vulnerabilities such as buffer overflows and format string vulnerabilities into your code by providing clear and easy-to-use interfaces. For each C function a secure alternate function ending in a "_s" postfix is provided (e.g., strcpy_s). Use of these functions is recommended by security experts and secure coding standards 
+
+\section libinstall Installing the library
+
+    \li Step 1: Download the package from the Downloads page.
+    \li Step 2: Extract it.
+    \li Step 3: Compile the slibc libary by typing make.  Slibc is compiled as a shared library (libslibc.so).
+    \li Step 4: Optionally, run all tests by executing make test. 
+
+\section libusing Using SLIBC with your program
+
+\li Step 1:    Use the new _s functions in your code:
+@code
+    #include <string.h>
+    int main(int argc, char *argv[])
+    {
+            char dest[10];  
+            strcpy_s(dest, sizeof(dest), argv[0]);
+    }
+@endcode
+
+\li Step 2:    When compiling include the slibc header directory (include/slibc) in your compiler's include path (e.g., add -I~/slibc/include/slibc). Remember that Annex K adds functions to the standard C library by extending existing header files. Slibc makes the fact that it's a third-party library (instead of being part of GLIBC) as transparent as possible to your program. To use strcpy_s, simply include string.h in your program. It is important that your compiler searches in the slibc header directory first.
+
+
+\li Step 3: Link your program to Slibc. Slibc is built as a shared library. 
+       Either add -lslibc to your linking step. 
+       Additionally, you might have to add the location of slibc's so-files to your Linker 
+       search path by adding -L (e.g., -L../src/).
+
+\li Step 4: Run your program. If the Slibc shared object file cannot be found, you have to adjust 
+       the environment variable LD_LIBRARY_PATH. 
+*/

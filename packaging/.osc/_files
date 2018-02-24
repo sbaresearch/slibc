@@ -1,0 +1,7 @@
+<directory name="slibc" rev="129" srcmd5="06d5fc6e410d26f57c3d0628d9b9ca27" vrev="63">
+  <entry md5="f14b59c4e9ff586ba815b619238e2955" mtime="1355930787" name="debian.tar.gz" size="1533" />
+  <entry md5="56d4005fa95b007d278c01500034c0b0" mtime="1355315483" name="libslibc.spec" size="2353" />
+  <entry md5="d5ff2f9bfa0be73fa60fbee4635dfba1" mtime="1357125704" name="slibc-0.9.2.tar.gz" size="109096" />
+  <entry md5="d41d8cd98f00b204e9800998ecf8427e" mtime="1350913230" name="slibc.changes" size="0" />
+  <entry md5="60987dcdf77be78cf06edc6a7ccf9e76" mtime="1352214764" name="slibc.dsc" size="291" />
+</directory>
