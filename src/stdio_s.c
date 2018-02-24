@@ -107,7 +107,7 @@ errno_t tmpnam_s(char *s, rsize_t maxsize)
 
 
 
-inline void get_s_cleanup(char *s)
+static inline void get_s_cleanup(char *s)
 {
 	if(s)
 		s[0] = '\0';
