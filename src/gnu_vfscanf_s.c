@@ -28,7 +28,7 @@
 #include <string.h>
 #include <wchar.h>
 #include <wctype.h>
-#include <bits/libc-lock.h>
+#include "gnu_libc-lock.h"
 #include <locale.h>
 #include <stddef.h>
 #include "slibc.h"
