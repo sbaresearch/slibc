@@ -297,6 +297,30 @@ errno_t strerror_s(char *s, rsize_t maxsize,
 
 size_t strerrorlen_s(errno_t errnum);
 
+///////////////////////////////
+/// The memset_s function copies the value ch (after conversion to unsigned char as if by (unsigned char)ch)
+/// into each of the first count characters of the object pointed to by dest. The following errors are detected
+/// at runtime and call the currently installed constraint handler function after storing ch in every location
+/// of the destination range [dest, dest+destsz) if dest and destsz are themselves valid.
+///
+/// The behavior is undefined if the size of the character array pointed to by dest < count <= destsz;
+/// in other words, an erroneous value of destsz does not expose the impending buffer overflow.
+///
+/// @param [out] dest destination buffer
+///
+/// @param [in] destsz size of the destination array
+///
+/// @param [in] ch fill character
+///
+/// @param [in] count number of bytes to fill
+///
+/// @return The memset_s function returns zero on success, non-zero on error. Also on error, if dest is not
+/// a null pointer and destsz is valid, writes destsz fill bytes ch to the destination array.
+///
+///////////////////////////////
+
+errno_t memset_s(void *dest, rsize_t destsz, int ch, rsize_t count);
+
 SLIBC_END_DECLS
 
 

@@ -361,3 +361,16 @@ size_t strerrorlen_s(errno_t errnum)
 	char * ch = strerror(errnum);
 	return strlen(ch);
 }
+
+errno_t memset_s(void *dest, rsize_t destsz, int ch, rsize_t count) {
+    if (dest == NULL) return EINVAL;
+    if (destsz > RSIZE_MAX) return EINVAL;
+    if (count > destsz) return EINVAL;
+
+    volatile unsigned char *p = (volatile unsigned char*)dest;
+    while (destsz-- && count--) {
+        *p++ = ch;
+    }
+
+    return 0;
+}
