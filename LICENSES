@@ -1,4 +1,6 @@
-The slibc is distributed under the LGPL license.
+All source code files from SBA Research are licensed under the BSD-2-Clause.
+The slibc library as a whole is distributed under the LGPGL license since it includes 5 files from the GNU C library which are licensed under the LGPL.
+
 
 This file contains the copying permission notices for various files in the
 Slibc Library distribution that have copyright owners other than SBA Research.
